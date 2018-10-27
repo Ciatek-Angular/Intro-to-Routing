@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { HeroDetailService } from './heroes.service'
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -7,11 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private heroesService: HeroDetailService) { }
 
-  heroes = ['naruto', 'lofi', 'zoro' ]
+  heroes
 
   ngOnInit() {
+    this.heroes = this.heroesService.heroes
   }
+
 
 }

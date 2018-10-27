@@ -1,3 +1,3 @@
 <ul class="list-group">
-  <li *ngFor="let hero of heroes" class="list-group-item"> {{ hero }} </li>
+  <li *ngFor="let hero of heroes; let id=index" class="list-group-item"> <a [routerLink]="['/hero/', id]"> {{ hero }} </a> </li>
 </ul>
