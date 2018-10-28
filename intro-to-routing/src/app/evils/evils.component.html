@@ -1,4 +1,6 @@
 <ul class="list-group">
-    <li *ngFor="let evil of evils" class="list-group-item"> {{ evil }} </li>
+    <li *ngFor="let evil of evils; let id = index" class="list-group-item"> 
+        <a [routerLink]="['/evil/', id]"> {{ evil }} </a> 
+     </li>
   </ul>
   

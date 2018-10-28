@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EvilService } from 'src/app/evils/evil.service';
 
 @Component({
   selector: 'app-evils',
@@ -7,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EvilsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private evilService: EvilService) { }
 
-  evils = ['akaino', 'akatski', 'pain' ]
+  evils
 
   ngOnInit() {
+    this.evils = this.evilService.evils
   }
 
 }

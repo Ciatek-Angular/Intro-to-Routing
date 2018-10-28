@@ -8,12 +8,12 @@ import { FormsModule } from '@angular/forms'
 import { HeroesComponent } from './heroes/heroes.component'
 import { EvilsComponent } from './evils/evils.component'
 import { HeroDetailComponent } from './hero-detail/hero-detail.component'
-// import { EvilDetailComponent } from ''
+import { EvildetailComponent } from './evildetail/evildetail.component'
 
 const routes: Routes = [
     { path: 'heroes', component: HeroesComponent },
     { path: 'hero/:id', component: HeroDetailComponent },
-    // { path: 'hero/:id', component: EvilDetailComponent },
+    { path: 'evil/:id', component: EvildetailComponent },
     { path: 'evils', component: EvilsComponent }
   ];
 
@@ -23,6 +23,7 @@ const routes: Routes = [
         EvilsComponent,
         HeroesComponent,
         HeroDetailComponent,
+        EvildetailComponent
     ],
     exports:[RouterModule]
   })

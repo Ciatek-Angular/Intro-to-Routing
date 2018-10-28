@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 
 import { HeroDetailService } from './heroes/heroes.service'
+import { EvilService } from './evils/evil.service'
+
 
 // import { HeroesComponent } from './heroes/heroes.component'
 
@@ -22,7 +24,7 @@ import { HeroDetailService } from './heroes/heroes.service'
     CommonModule,
     AppRoutingModule,
   ],
-  providers: [HeroDetailService],
+  providers: [HeroDetailService, EvilService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
